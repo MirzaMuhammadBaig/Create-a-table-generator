@@ -1,8 +1,11 @@
 let table = prompt("Which table do you want to multiply?");
 let lines = prompt("How many length do you want to multiply?");
 
-if (lines == 0) {
-    alert("Your selected length is 0, so I can't show output, so make sure that your selected length is greater than 0")
+table = parseInt(table)
+lines = parseInt(lines)
+
+if (lines == 0 || table == 0) {
+    alert("You are writing 0, so I can't show output, make sure that your putting value is greater than 0")
 } else {
     let also;
     let text = "";
@@ -51,4 +54,8 @@ if (lines == 0) {
 
     document.getElementById("demo").innerHTML = text;
     document.getElementById("create").innerHTML = "Created by Muhammad";
+}
+
+if (lines == 0 || table == 0 ){
+    document.getElementById("warn").innerHTML = "Try again with the value above 0";
 }
